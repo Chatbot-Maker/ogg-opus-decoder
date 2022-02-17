@@ -1,7 +1,14 @@
-import OpusDecodedAudio from "./OpusDecodedAudio.js";
 import EmscriptenWASM from "./EmscriptenWasm.js";
 
 let wasm;
+
+class OpusDecodedAudio {
+  constructor(channelData, samplesDecoded) {
+    this.channelData = channelData;
+    this.samplesDecoded = samplesDecoded;
+    this.sampleRate = 48000;
+  }
+}
 
 export default class OggOpusDecoder {
   constructor(_OpusDecodedAudio, _EmscriptenWASM) {

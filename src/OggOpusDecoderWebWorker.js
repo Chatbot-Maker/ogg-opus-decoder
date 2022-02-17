@@ -1,10 +1,17 @@
 import Worker from "web-worker";
 
 import EmscriptenWASM from "./EmscriptenWasm.js";
-import OpusDecodedAudio from "./OpusDecodedAudio.js";
 import OggOpusDecoder from "./OggOpusDecoder.js";
 
 let sourceURL;
+
+class OpusDecodedAudio {
+  constructor(channelData, samplesDecoded) {
+    this.channelData = channelData;
+    this.samplesDecoded = samplesDecoded;
+    this.sampleRate = 48000;
+  }
+}
 
 export default class OggOpusDecoderWebWorker extends Worker {
   constructor() {
