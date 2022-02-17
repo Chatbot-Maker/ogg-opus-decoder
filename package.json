@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eshaz/wasm-audio-decoders.git"
+    "url": "git+https://github.com/Chatbot-Maker/ogg-opus-decoder.git"
   },
   "type": "module",
   "keywords": [
